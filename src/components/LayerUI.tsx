@@ -15,6 +15,7 @@ import { BackgroundPickerAndDarkModeToggle } from "./BackgroundPickerAndDarkMode
 import CollabButton from "./CollabButton";
 import { ErrorDialog } from "./ErrorDialog";
 import { ExportCB, ImageExportDialog } from "./ImageExportDialog";
+import { LibraryButton } from "./LibraryButton";
 import { FixedSideContainer } from "./FixedSideContainer";
 import { HintViewer } from "./HintViewer";
 import { Island } from "./Island";
@@ -28,13 +29,12 @@ import Stack from "./Stack";
 import { UserList } from "./UserList";
 import Library, { distributeLibraryItemsOnSquareGrid } from "../data/library";
 import { JSONExportDialog } from "./JSONExportDialog";
-import { LibraryButton } from "./LibraryButton";
 import { isImageFileHandle } from "../data/blob";
 import { LibraryMenu } from "./LibraryMenu";
 
 import "./LayerUI.scss";
 import "./Toolbar.scss";
-import { PenModeButton } from "./PenModeButton";
+// import { PenModeButton } from "./PenModeButton";
 import { trackEvent } from "../analytics";
 import { useDevice } from "../components/App";
 import { Stats } from "./Stats";
@@ -314,13 +314,13 @@ const LayerUI = ({
                       "zen-mode": appState.zenModeEnabled,
                     })}
                   >
-                    <PenModeButton
+                    {/* <PenModeButton
                       zenModeEnabled={appState.zenModeEnabled}
                       checked={appState.penMode}
                       onChange={onPenModeToggle}
                       title={t("toolBar.penMode")}
                       penDetected={appState.penDetected}
-                    />
+                    /> */}
                     <LockButton
                       zenModeEnabled={appState.zenModeEnabled}
                       checked={appState.activeTool.locked}
@@ -362,7 +362,7 @@ const LayerUI = ({
               )}
             </Section>
           )}
-          <div
+          {/* <div
             className={clsx(
               "layer-ui__wrapper__top-right zen-mode-transition",
               {
@@ -375,7 +375,7 @@ const LayerUI = ({
               actionManager={actionManager}
             />
             {renderTopRightUI?.(device.isMobile, appState)}
-          </div>
+          </div> */}
         </div>
       </FixedSideContainer>
     );

@@ -94,21 +94,21 @@ export const Tooltip = ({
   }, []);
   return (
     <div
-      className="excalidraw-tooltip-wrapper"
-      onPointerEnter={(event) =>
-        updateTooltip(
-          event.currentTarget as HTMLDivElement,
-          getTooltipDiv(),
-          label,
-          long,
-        )
-      }
-      onPointerLeave={() =>
-        getTooltipDiv().classList.remove("excalidraw-tooltip--visible")
-      }
-      style={style}
+      // className="excalidraw-tooltip-wrapper"
+      // onPointerEnter={(event) =>
+      //   updateTooltip(
+      //     event.currentTarget as HTMLDivElement,
+      //     getTooltipDiv(),
+      //     label,
+      //     long,
+      //   )
+      // }
+      // onPointerLeave={() =>
+      //   getTooltipDiv().classList.remove("excalidraw-tooltip--visible")
+      // }
+      // style={style}
     >
-      {children}
+      {/* {children} */}
     </div>
   );
 };

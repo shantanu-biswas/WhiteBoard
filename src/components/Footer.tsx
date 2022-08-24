@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { ActionManager } from "../actions/manager";
 import { AppState, ExcalidrawProps } from "../types";
 import {
-  ExitZenModeAction,
+  // ExitZenModeAction,
   FinalizeAction,
   UndoRedoActions,
   ZoomActions,
@@ -88,10 +88,10 @@ const Footer = ({
       >
         {renderCustomFooter?.(false, appState)}
       </div>
-      <ExitZenModeAction
+      {/* <ExitZenModeAction
         executeAction={actionManager.executeAction}
         showExitZenModeBtn={showExitZenModeBtn}
-      />
+      /> */}
     </footer>
   );
 };

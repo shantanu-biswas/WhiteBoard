@@ -17,7 +17,7 @@ import { LockButton } from "./LockButton";
 import { UserList } from "./UserList";
 import { BackgroundPickerAndDarkModeToggle } from "./BackgroundPickerAndDarkModeToggle";
 import { LibraryButton } from "./LibraryButton";
-import { PenModeButton } from "./PenModeButton";
+// import { PenModeButton } from "./PenModeButton";
 import { Stats } from "./Stats";
 import { actionToggleStats } from "../actions";
 
@@ -101,13 +101,13 @@ export const MobileMenu = ({
                   setAppState={setAppState}
                   isMobile
                 />
-                <PenModeButton
+                {/* <PenModeButton
                   checked={appState.penMode}
                   onChange={onPenModeToggle}
                   title={t("toolBar.penMode")}
                   isMobile
                   penDetected={appState.penDetected}
-                />
+                /> */}
               </Stack.Row>
               {libraryMenu}
             </Stack.Col>

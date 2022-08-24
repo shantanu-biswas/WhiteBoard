@@ -222,19 +222,19 @@ const initializeScene = async (opts: {
   return { scene: null, isExternalScene: false };
 };
 
-const PlusLPLinkJSX = (
-  <p style={{ direction: "ltr", unicodeBidi: "embed" }}>
-    Introducing Excalidraw+
-    <br />
-    <a
-      href="https://plus.excalidraw.com/plus?utm_source=excalidraw&utm_medium=banner&utm_campaign=launch"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Try out now!
-    </a>
-  </p>
-);
+// const PlusLPLinkJSX = (
+//   <p style={{ direction: "ltr", unicodeBidi: "embed" }}>
+//     Introducing Excalidraw+
+//     <br />
+//     <a
+//       href="https://plus.excalidraw.com/plus?utm_source=excalidraw&utm_medium=banner&utm_campaign=launch"
+//       target="_blank"
+//       rel="noreferrer"
+//     >
+//       Try out now!
+//     </a>
+//   </p>
+// );
 
 const PlusAppLinkJSX = (
   <a
@@ -586,13 +586,13 @@ const ExcalidrawWrapper = () => {
 
       return (
         <div
-          style={{
-            width: isExcalidrawPlusSignedUser ? "21ch" : "23ch",
-            fontSize: "0.7em",
-            textAlign: "center",
-          }}
+          // style={{
+          //   width: isExcalidrawPlusSignedUser ? "21ch" : "23ch",
+          //   fontSize: "0.7em",
+          //   textAlign: "center",
+          // }}
         >
-          {isExcalidrawPlusSignedUser ? PlusAppLinkJSX : PlusLPLinkJSX}
+          {/* {isExcalidrawPlusSignedUser ? PlusAppLinkJSX : PlusLPLinkJSX} */}
         </div>
       );
     },
@@ -636,7 +636,7 @@ const ExcalidrawWrapper = () => {
               {renderLanguageList()}
             </fieldset>
             {/* FIXME remove after 2021-05-20 */}
-            <div
+            {/* <div
               style={{
                 width: "24ch",
                 fontSize: "0.7em",
@@ -652,7 +652,7 @@ const ExcalidrawWrapper = () => {
               }}
             >
               {isExcalidrawPlusSignedUser ? PlusAppLinkJSX : PlusLPLinkJSX}
-            </div>
+            </div> */}
           </div>
         );
       }

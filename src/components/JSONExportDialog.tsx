@@ -61,7 +61,7 @@ const JSONExportModal = ({
             />
           </Card>
         )}
-        {onExportToBackend && (
+        {/* {onExportToBackend && (
           <Card color="pink">
             <div className="Card-icon">{link}</div>
             <h2>{t("exportDialog.link_title")}</h2>
@@ -78,7 +78,7 @@ const JSONExportModal = ({
               }}
             />
           </Card>
-        )}
+        )} */}
         {exportOpts.renderCustomUI &&
           exportOpts.renderCustomUI(elements, appState, files, canvas)}
       </div>

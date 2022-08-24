@@ -116,11 +116,11 @@ const LibraryMenuItems = ({
                 await library.updateLibrary({
                   libraryItems: fileOpen({
                     description: "Excalidraw library files",
-                    // ToDo: Be over-permissive until https://bugs.webkit.org/show_bug.cgi?id=34442
-                    // gets resolved. Else, iOS users cannot open `.excalidraw` files.
-                    /*
-                    extensions: [".json", ".excalidrawlib"],
-                    */
+                    // // ToDo: Be over-permissive until https://bugs.webkit.org/show_bug.cgi?id=34442
+                    // // gets resolved. Else, iOS users cannot open `.excalidraw` files.
+                    // /*
+                    // extensions: [".json", ".excalidrawlib"],
+                    // */
                   }),
                   merge: true,
                   openLibraryMenu: true,
@@ -198,7 +198,7 @@ const LibraryMenuItems = ({
             </ToolButton>
           </Tooltip>
         )}
-        {device.isMobile && (
+        {/* {device.isMobile && (
           <div className="library-menu-browse-button--mobile">
             <a
               href={`${process.env.REACT_APP_LIBRARY_URL}?target=${
@@ -211,7 +211,7 @@ const LibraryMenuItems = ({
               {t("labels.libraries")}
             </a>
           </div>
-        )}
+        )} */}
       </div>
     );
   };
@@ -468,7 +468,7 @@ const LibraryMenuItems = ({
               }}
             >
               {t("library.noItems")}
-              <div
+              {/* <div
                 style={{
                   margin: ".6rem 0",
                   fontSize: ".8em",
@@ -479,11 +479,10 @@ const LibraryMenuItems = ({
                 {publishedItems.length > 0
                   ? t("library.hint_emptyPrivateLibrary")
                   : t("library.hint_emptyLibrary")}
-              </div>
+              </div> */}
             </div>
           ) : (
             renderLibrarySection([
-              // append pending library item
               ...(pendingElements.length
                 ? [{ id: null, elements: pendingElements }]
                 : []),
@@ -493,12 +492,12 @@ const LibraryMenuItems = ({
         </>
 
         <>
-          {(publishedItems.length > 0 ||
+          {/* {(publishedItems.length > 0 ||
             (!device.isMobile &&
               (pendingElements.length > 0 || unpublishedItems.length > 0))) && (
             <div className="separator">{t("labels.excalidrawLib")}</div>
-          )}
-          {publishedItems.length > 0 ? (
+          )} */}
+          {/* {publishedItems.length > 0 ? (
             renderLibrarySection(publishedItems)
           ) : unpublishedItems.length > 0 ? (
             <div
@@ -514,27 +513,27 @@ const LibraryMenuItems = ({
             >
               {t("library.noItems")}
             </div>
-          ) : null}
+          ) : null} */}
         </>
       </Stack.Col>
     );
   };
 
-  const renderLibraryFooter = () => {
-    return (
-      <a
-        className="library-menu-browse-button"
-        href={`${process.env.REACT_APP_LIBRARY_URL}?target=${
-          window.name || "_blank"
-        }&referrer=${referrer}&useHash=true&token=${id}&theme=${theme}&version=${
-          VERSIONS.excalidrawLibrary
-        }`}
-        target="_excalidraw_libraries"
-      >
-        {t("labels.libraries")}
-      </a>
-    );
-  };
+  // const renderLibraryFooter = () => {
+  //   return (
+  //     <a
+  //       className="library-menu-browse-button"
+  //       href={`${process.env.REACT_APP_LIBRARY_URL}?target=${
+  //         window.name || "_blank"
+  //       }&referrer=${referrer}&useHash=true&token=${id}&theme=${theme}&version=${
+  //         VERSIONS.excalidrawLibrary
+  //       }`}
+  //       target="_excalidraw_libraries"
+  //     >
+  //       {t("labels.libraries")}
+  //     </a>
+  //   );
+  // };
 
   return (
     <div
@@ -551,7 +550,7 @@ const LibraryMenuItems = ({
       {showRemoveLibAlert && renderRemoveLibAlert()}
       {renderLibraryHeader()}
       {renderLibraryMenuItems()}
-      {!device.isMobile && renderLibraryFooter()}
+      {/* {!device.isMobile && renderLibraryFooter()} */}
     </div>
   );
 };

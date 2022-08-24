@@ -156,7 +156,7 @@ const RoomDialog = ({
               </span>{" "}
               {t("roomDialog.desc_privacy")}
             </p>
-            <p>{t("roomDialog.desc_exitSession")}</p>
+            {/* <p>{t("roomDialog.desc_exitSession")}</p> */}
             <div className="RoomDialog-sessionStartButtonContainer">
               <ToolButton
                 className="RoomDialog-stopSession"

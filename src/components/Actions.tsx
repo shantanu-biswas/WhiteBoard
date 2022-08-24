@@ -285,22 +285,24 @@ export const UndoRedoActions = ({
   </div>
 );
 
-export const ExitZenModeAction = ({
-  executeAction,
-  showExitZenModeBtn,
-}: {
-  executeAction: ActionManager["executeAction"];
-  showExitZenModeBtn: boolean;
-}) => (
-  <button
-    className={clsx("disable-zen-mode", {
-      "disable-zen-mode--visible": showExitZenModeBtn,
-    })}
-    onClick={() => executeAction(actionToggleZenMode)}
-  >
-    {t("buttons.exitZenMode")}
-  </button>
-);
+// export const ExitZenModeAction = ({
+//   executeAction,
+//   showExitZenModeBtn,
+// }: {
+//   executeAction: ActionManager["executeAction"];
+//   showExitZenModeBtn: boolean;
+// }) => (
+//   <button
+//     className={clsx("disable-zen-mode", {
+//       "disable-zen-mode--visible": showExitZenModeBtn,
+//     })}
+//     onClick={() => executeAction(actionToggleZenMode)
+    
+//     }
+//   >
+//     {t("buttons.exitZenMode")}
+//   </button>
+// );
 
 export const FinalizeAction = ({
   renderAction,
